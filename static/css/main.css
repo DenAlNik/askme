@@ -31,6 +31,10 @@ img.in-block-of-settings {
     height: 25px;
     width: 25px
 }
+.image-in-btn-question {
+    height: 32px;
+    width: 32px
+}
 .image-in-question {
     max-height: 125px;
     max-width: 125px;
@@ -75,6 +79,9 @@ img.in-block-of-settings {
 .margin-bottom-0 {
     margin-bottom: 0;
 }
+.padding-0 {
+    padding: 0;
+}
 
 /*стили конкретных элементов*/
 textarea {
@@ -105,6 +112,11 @@ textarea {
 .button-lk-dislike {
     height: 30px;
     width: 30px;
+    padding: 0;
+}
+.button-lk-dislike-question {
+    height: 45px;
+    width: 45px;
     padding: 0;
 }
 .main-text-question {

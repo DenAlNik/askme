@@ -1,0 +1,22 @@
+{% load static %}
+
+<div class="col-2 text-center">
+    <img src="{% static '/img/img.png' %}" alt="avatar" class="in-block-of-question">
+    <div>
+        <button type="button"
+                class="btn btn-outline-success button-lk-dislike margin-circle">
+            <img src="{% static '/svg/arrow-sm-up-svgrepo-com.svg' %}"
+                 alt="like"
+                 class="image-in-btn">
+        </button>
+        <h6 class="margin-bottom-0">
+            5
+        </h6>
+        <button type="button"
+                class="btn btn-outline-danger button-lk-dislike margin-circle">
+            <img src="{% static '/svg/arrow-sm-down-svgrepo-com.svg' %}"
+                 alt="like"
+                 class="image-in-btn">
+        </button>
+    </div>
+</div>

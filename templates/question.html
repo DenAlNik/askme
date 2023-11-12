@@ -1,0 +1,60 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+{% block title %}Question{% endblock %}
+
+{% block content %}
+
+    <div class="col-9">
+        <div class="row margin-top">
+            <div class="col-3 text-center padding-0">
+                <img src="{% static '/img/img.png' %}" alt="avatar" class="image-in-question margin-bottom">
+                <div>
+                    <button type="button"
+                            class="btn btn-outline-success button-lk-dislike-question margin-circle">
+                        <img src="{% static '/svg/arrow-sm-up-svgrepo-com.svg' %}"
+                             alt="like"
+                             class="image-in-btn-question">
+                    </button>
+                    <h5 class="margin-bottom-0">
+                        5
+                    </h5>
+                    <button type="button"
+                            class="btn btn-outline-danger button-lk-dislike-question margin-circle">
+                        <img src="{% static '/svg/arrow-sm-down-svgrepo-com.svg' %}"
+                             alt="like"
+                             class="image-in-btn-question">
+                    </button>
+                </div>
+            </div>
+            <div class="col-9">
+                <h3>{{ question.title }}</h3>
+                <p class="main-text">{{ question.content }}</p>
+                <div class="d-flex">
+                    <h5>Tags:&nbsp&nbsp</h5>
+                    <ul class="list-inline h5">
+                        {% for tag in question.tags %}
+                            {% include 'components/tag-item.html' %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="affix-for-lines-in-question">
+        {% for answer in answers %}
+            {% include 'components/answer-item.html' %}
+        {% endfor %}
+
+            {% include 'components/paginator.html' %}
+
+        <hr class="affix-for-lines-in-question">
+        <form>
+            <div class="form-group">
+                <textarea class="form-control" rows="6" placeholder="Enter your answer there..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-outline-primary margin-sides">Answer!</button>
+        </form>
+    </div>
+
+{% endblock %}

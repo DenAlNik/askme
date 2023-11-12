@@ -1,0 +1,22 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+{% block title %}Tag: {{ tag_name }}{% endblock %}
+
+{% block content %}
+
+    <div class="d-flex align-items-center margin-bottom-1">
+        <h2 class="margin-right">Tag: {{ tag_name }}</h2>
+        <h5><a href="{% url 'index' %}">Back</a></h5>
+    </div>
+
+    {% for question in questions %}
+        {% include 'components/question-item.html' %}
+    {% endfor %}
+
+        {% include 'components/paginator.html' %}
+
+    </footer>
+
+{% endblock %}

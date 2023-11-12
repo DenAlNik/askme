@@ -1,0 +1,19 @@
+{% load static %}
+
+<div class="border margin-sides">
+    <div class="row margin-top">
+        {% include 'components/item.html' %}
+        <div class="col-9">
+            <h4>{{ answer.title }}</h4>
+            <p class="main-answer-text">{{ answer.content }}</p>
+            <div>
+                <div class="form-check">
+                    <input class="form-check-input margin-bottom" type="checkbox" value="">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Correct!
+                        </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

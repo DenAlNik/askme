@@ -1,0 +1,11 @@
+{% load static %}
+
+<div class="form-inline d-flex form-input justify-content-center">
+    <form action="{% url 'index' %}" class="form-form-input">
+        <input class="form-control mr-sm-2" type="search" placeholder="Find your question" aria-label="Search">
+    </form>
+</div>
+<div class="d-flex align-items-center">
+        <a href="{% url 'login' %}" class="margin">Log in</a>
+        <a href="{% url 'signup' %}" class="margin">Register</a>
+</div>

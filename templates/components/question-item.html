@@ -1,0 +1,26 @@
+{% load static %}
+
+<div class="border margin-sides">
+    <div class="row margin-top">
+
+        {% include 'components/item.html' %}
+
+        <div class="col-9">
+            <h4><a href="{% url 'question' question_id=question.id %}" class="link-un">{{ question.title }}</a></h4>
+            <p class="main-text-question">{{ question.content }}</p>
+            <div class="row">
+                <div class="col-4">
+                    <h6><a href="{% url 'question' question_id=question.id %}">Answer(4)</a></h6>
+                </div>
+                <div class="col-8 d-flex">
+                    <h6>Tags:&nbsp&nbsp</h6>
+                    <ul class="list-inline h6">
+                        {% for tag in question.tags %}
+                            {% include 'components/tag-item.html' %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

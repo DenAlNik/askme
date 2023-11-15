@@ -18,7 +18,7 @@
                              class="image-in-btn-question">
                     </button>
                     <h5 class="margin-bottom-0">
-                        5
+                        {{ question.rating }}
                     </h5>
                     <button type="button"
                             class="btn btn-outline-danger button-lk-dislike-question margin-circle">
@@ -34,7 +34,7 @@
                 <div class="d-flex">
                     <h5>Tags:&nbsp&nbsp</h5>
                     <ul class="list-inline h5">
-                        {% for tag in question.tags %}
+                        {% for tag in question.tags.all %}
                             {% include 'components/tag-item.html' %}
                         {% endfor %}
                     </ul>
@@ -42,10 +42,9 @@
             </div>
         </div>
         <hr class="affix-for-lines-in-question">
-        {% for answer in answers %}
+        {% for block in page %}
             {% include 'components/answer-item.html' %}
         {% endfor %}
-
             {% include 'components/paginator.html' %}
 
         <hr class="affix-for-lines-in-question">

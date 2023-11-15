@@ -11,7 +11,7 @@
         <h5><a href="{% url 'index' %}">Back</a></h5>
     </div>
 
-    {% for question in questions %}
+    {% for block in page %}
         {% include 'components/question-item.html' %}
     {% endfor %}
 
